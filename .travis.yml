@@ -7,7 +7,7 @@ services:
 before_install:
   - docker build -t itscarlosisaac/react-test -f ./client/dockerfile.dev ./client
 script:
-  - docker run itscarlosisaac/react-test yarn test -- --coverage
+  - docker run  -e CI=true i itscarlosisaac/react-test yarn test -- --collectCoverage
 
 after_success:
   - docker build -t itscarlosisaac/multi-client ./client
