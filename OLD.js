@@ -1,4 +1,5 @@
-{
+// Dockerrun.aws.json
+let M = {
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {

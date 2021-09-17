@@ -14,6 +14,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
+          <h1>Hello Front End</h1>
           <img src={logo} className="App-logo" alt="logo" />
           <Link to="/">Home</Link>
           <Link to="/page">Page</Link>

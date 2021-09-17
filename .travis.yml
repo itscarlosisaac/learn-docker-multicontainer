@@ -24,11 +24,11 @@ after_success:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "learn-docker-multi"
-  env: "Learndockermulti-env"
+  app: "multi-docker"
+  env: "Multidocker-env"
   bucket_name: 'elasticbeanstalk-us-east-2-140458068491'
-  bucket_path: 'learn-docker-multi'
+  bucket_path: 'multi-docker'
   on:
-    branch: master
+    branch: main
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
