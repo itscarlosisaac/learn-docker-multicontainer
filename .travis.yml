@@ -21,3 +21,14 @@ after_success:
   - docker push itscarlosisaac/multi-nginx
   - docker push itscarlosisaac/multi-server
   - docker push itscarlosisaac/multi-worker
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "learn-docker-multi"
+  env: "Learndockermulti-env"
+  bucket_name: 'elasticbeanstalk-us-east-2-140458068491'
+  bucket_path: 'learn-docker-multi'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
