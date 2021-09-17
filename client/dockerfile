@@ -1,6 +1,5 @@
-## Commented to fix AWS naming
 FROM node:alpine as builder
-WORKDIR "/app"
+WORKDIR '/app'
 COPY ./package.json ./
 RUN yarn
 COPY . .
